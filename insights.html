@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +14,7 @@
   >
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/app-navigation.css">
 
   <style>
     * {
@@ -97,7 +99,7 @@
       border: 1px solid var(--line);
       border-radius: 17px;
       background: var(--card);
-      box-shadow: 0 8px 24px rgba(115,67,86,.07);
+      box-shadow: 0 8px 24px rgba(115, 67, 86, .07);
     }
 
     .desktop-nav a {
@@ -145,7 +147,7 @@
     .ctrl-btn:hover {
       transform: translateY(-2px);
       border-color: var(--rose);
-      box-shadow: 0 8px 20px rgba(115,67,86,.12);
+      box-shadow: 0 8px 20px rgba(115, 67, 86, .12);
     }
 
     .avatar {
@@ -199,7 +201,7 @@
       border: 1px solid var(--line);
       border-radius: 26px !important;
       background: var(--card);
-      box-shadow: 0 18px 45px rgba(115,67,86,.08);
+      box-shadow: 0 18px 45px rgba(115, 67, 86, .08);
     }
 
     .premium-card::after {
@@ -392,14 +394,14 @@
         var(--rose),
         var(--rose3)
       );
-      box-shadow: 0 8px 20px rgba(201,120,165,.16);
+      box-shadow: 0 8px 20px rgba(201, 120, 165, .16);
       transition: .25s ease;
     }
 
     .bar-box:hover .bar,
     .bar-box.selected .bar {
       transform: translateY(-5px);
-      box-shadow: 0 14px 28px rgba(201,120,165,.28);
+      box-shadow: 0 14px 28px rgba(201, 120, 165, .28);
     }
 
     .bar-month {
@@ -586,7 +588,6 @@
     /* TABLET */
 
     @media (max-width: 1050px) and (min-width: 701px) {
-
       header {
         grid-template-columns: auto 1fr;
       }
@@ -614,7 +615,6 @@
     /* MOBILE */
 
     @media (max-width: 700px) {
-
       .wrap {
         width: calc(100% - 24px) !important;
         padding: 15px 0 95px !important;
@@ -726,7 +726,7 @@
         border-radius: 19px;
         border: 1px solid var(--line);
         background: var(--card);
-        box-shadow: 0 15px 35px rgba(115,67,86,.15);
+        box-shadow: 0 15px 35px rgba(115, 67, 86, .15);
       }
 
       .nav-item {
@@ -758,7 +758,6 @@
     }
 
     @media (max-width: 370px) {
-
       .brand-logo {
         width: 36px;
         height: 36px;
@@ -785,7 +784,6 @@
     /* LARGE DESKTOP */
 
     @media (min-width: 1400px) {
-
       .wrap {
         max-width: 1380px !important;
         padding-top: 38px !important;
@@ -809,7 +807,6 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="css/app-navigation.css">
 </head>
 
 <body>
@@ -865,7 +862,7 @@
         <button
           type="button"
           class="ctrl-btn app-control"
-          onclick="setLang(getLang()==='en'?'hi':'en')"
+          onclick="setLang(getLang() === 'en' ? 'hi' : 'en')"
         >
           🌐 <span id="lang-label">HI</span>
         </button>
@@ -933,9 +930,7 @@
               Avg Cycle
             </span>
 
-            <small id="cycle-unit">
-              days
-            </small>
+            <small id="cycle-unit">days</small>
           </div>
 
           <div class="stat">
@@ -948,9 +943,7 @@
               Avg Period
             </span>
 
-            <small id="period-unit">
-              days
-            </small>
+            <small id="period-unit">days</small>
           </div>
 
           <div class="stat">
@@ -963,9 +956,7 @@
               Variation
             </span>
 
-            <small id="variation-unit">
-              days
-            </small>
+            <small id="variation-unit">days</small>
           </div>
 
         </div>
@@ -1016,24 +1007,61 @@
 
     </main>
 
-    <section class="insight-grid tracking-history" aria-label="Tracking history">
-      <section class="premium-card" aria-labelledby="period-history-title">
+    <section
+      class="insight-grid tracking-history"
+      aria-label="Tracking history"
+    >
+
+      <section
+        class="premium-card"
+        aria-labelledby="period-history-title"
+      >
+
         <div class="section-top">
-          <h2 id="period-history-title">Previous Periods</h2>
+
+          <h2 id="period-history-title">
+            Previous Periods
+          </h2>
+
         </div>
-        <ul id="period-history-list" class="tracking-history-list" aria-live="polite">
-          <li class="tracking-history-empty">Loading period history…</li>
+
+        <ul
+          id="period-history-list"
+          class="tracking-history-list"
+          aria-live="polite"
+        >
+          <li class="tracking-history-empty">
+            Loading period history…
+          </li>
         </ul>
+
       </section>
 
-      <section class="premium-card" aria-labelledby="daily-history-title">
+      <section
+        class="premium-card"
+        aria-labelledby="daily-history-title"
+      >
+
         <div class="section-top">
-          <h2 id="daily-history-title">Previous Daily Logs</h2>
+
+          <h2 id="daily-history-title">
+            Previous Daily Logs
+          </h2>
+
         </div>
-        <ul id="daily-history-list" class="tracking-history-list" aria-live="polite">
-          <li class="tracking-history-empty">Loading daily history…</li>
+
+        <ul
+          id="daily-history-list"
+          class="tracking-history-list"
+          aria-live="polite"
+        >
+          <li class="tracking-history-empty">
+            Loading daily history…
+          </li>
         </ul>
+
       </section>
+
     </section>
 
     <section class="premium-card learn-card">
@@ -1084,7 +1112,10 @@
 
   </div>
 
-  <nav class="bottom-nav app-bottom-nav" aria-label="Main navigation">
+  <nav
+    class="bottom-nav app-bottom-nav"
+    aria-label="Main navigation"
+  >
 
     <a href="home.html" class="nav-item">
       <span>🏠</span>
@@ -1113,7 +1144,12 @@
 
   </nav>
 
+  <!-- Libraries -->
+
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- CareX scripts -->
+
   <script src="js/supabase.js"></script>
   <script src="js/data.js"></script>
   <script src="js/theme.js"></script>
@@ -1122,6 +1158,7 @@
   <script src="js/common.js"></script>
 
   <script>
+
     let cycles = [];
     let dailyLogs = [];
     let symptomLogs = [];
@@ -1139,9 +1176,10 @@
       const result = [];
 
       for (let i = 0; i < cycles.length - 1; i++) {
+
         const value = diff(
-          cycles[i + 1].start_date,
-          cycles[i].start_date
+          cycles[i].start_date,
+          cycles[i + 1].start_date
         );
 
         if (value > 0 && value <= 100) {
@@ -1153,6 +1191,7 @@
     }
 
     function periodLengths() {
+
       return cycles
         .map(cycle => {
 
@@ -1168,6 +1207,7 @@
           }
 
           return null;
+
         })
         .filter(
           value => value && value > 0 && value <= 30
@@ -1175,13 +1215,14 @@
     }
 
     function monthKey(date) {
-      return date ? date.substring(0, 7) : "";
+      return date ? String(date).substring(0, 7) : "";
     }
 
     function monthLabel(key) {
+
       if (!key) return "";
 
-      const date = new Date(key + "-01");
+      const date = new Date(key + "-01T00:00:00");
 
       return date.toLocaleDateString(
         getLang() === "hi" ? "hi-IN" : "en-IN",
@@ -1193,11 +1234,18 @@
     }
 
     function formatDate(date) {
+
       if (!date) return "—";
 
-      return new Date(
-        date + "T00:00:00"
-      ).toLocaleDateString(
+      const parsed = new Date(
+        String(date).substring(0, 10) + "T00:00:00"
+      );
+
+      if (Number.isNaN(parsed.getTime())) {
+        return "—";
+      }
+
+      return parsed.toLocaleDateString(
         getLang() === "hi" ? "hi-IN" : "en-IN",
         {
           day: "numeric",
@@ -1208,11 +1256,17 @@
     }
 
     function historyDate(record) {
-      return String(record?.date || record?.log_date || "").slice(0, 10);
+      return String(
+        record?.date ||
+        record?.log_date ||
+        ""
+      ).slice(0, 10);
     }
 
     function renderTrackingHistory() {
+
       const lang = getLang();
+
       const copy = lang === "hi"
         ? {
             period: "पीरियड",
@@ -1227,9 +1281,7 @@
             flow: "फ्लो",
             pain: "दर्द",
             note: "नोट",
-            noSymptoms: "कोई लक्षण दर्ज नहीं",
-            loadingPeriods: "पीरियड हिस्ट्री लोड हो रही है…",
-            loadingDaily: "डेली हिस्ट्री लोड हो रही है…"
+            noSymptoms: "कोई लक्षण दर्ज नहीं"
           }
         : {
             period: "Period",
@@ -1244,123 +1296,294 @@
             flow: "Flow",
             pain: "Pain",
             note: "Note",
-            noSymptoms: "No symptoms recorded",
-            loadingPeriods: "Loading period history…",
-            loadingDaily: "Loading daily history…"
+            noSymptoms: "No symptoms recorded"
           };
 
-      $("#period-history-title").textContent =
-        lang === "hi" ? "पिछले पीरियड" : "Previous Periods";
-      $("#daily-history-title").textContent =
-        lang === "hi" ? "पुराने डेली लॉग" : "Previous Daily Logs";
+      const periodTitle = $("#period-history-title");
+
+      if (periodTitle) {
+        periodTitle.textContent =
+          lang === "hi"
+            ? "पिछले पीरियड"
+            : "Previous Periods";
+      }
+
+      const dailyTitle = $("#daily-history-title");
+
+      if (dailyTitle) {
+        dailyTitle.textContent =
+          lang === "hi"
+            ? "पुराने डेली लॉग"
+            : "Previous Daily Logs";
+      }
 
       const periodList = $("#period-history-list");
-      periodList.replaceChildren();
-      if (!periodHistory.length) {
-        const empty = document.createElement("li");
-        empty.className = "tracking-history-empty";
-        empty.textContent = copy.noPeriods;
-        periodList.append(empty);
-      } else {
-        periodHistory.forEach(cycle => {
-          const item = document.createElement("li");
-          item.className = "tracking-history-item";
-          const details = document.createElement("div");
-          const title = document.createElement("strong");
-          title.textContent =
-            `${copy.period} · ${formatDate(cycle.start_date)}`;
-          const description = document.createElement("small");
-          const duration = cycle.period_length ||
-            (cycle.start_date && cycle.end_date
-              ? diff(cycle.start_date, cycle.end_date) + 1
-              : null);
-          description.textContent = [
-            cycle.end_date
-              ? `${copy.ended}: ${formatDate(cycle.end_date)}`
-              : copy.noEnd,
-            duration ? `${duration} ${copy.days}` : "",
-            cycle.cycle_length ? `${cycle.cycle_length} ${copy.days}` : ""
-          ].filter(Boolean).join(" · ");
-          details.append(title, description);
 
-          const status = document.createElement("span");
-          status.className = "badge";
-          status.textContent = cycle.end_date ? copy.saved : copy.inProgress;
-          item.append(details, status);
-          periodList.append(item);
-        });
+      if (periodList) {
+
+        periodList.replaceChildren();
+
+        if (!periodHistory.length) {
+
+          const empty = document.createElement("li");
+
+          empty.className =
+            "tracking-history-empty";
+
+          empty.textContent =
+            copy.noPeriods;
+
+          periodList.append(empty);
+
+        } else {
+
+          periodHistory.forEach(cycle => {
+
+            const item =
+              document.createElement("li");
+
+            item.className =
+              "tracking-history-item";
+
+            const details =
+              document.createElement("div");
+
+            const title =
+              document.createElement("strong");
+
+            title.textContent =
+              `${copy.period} · ${formatDate(cycle.start_date)}`;
+
+            const description =
+              document.createElement("small");
+
+            const duration =
+              cycle.period_length ||
+              (
+                cycle.start_date &&
+                cycle.end_date
+                  ? diff(
+                      cycle.start_date,
+                      cycle.end_date
+                    ) + 1
+                  : null
+              );
+
+            description.textContent = [
+              cycle.end_date
+                ? `${copy.ended}: ${formatDate(cycle.end_date)}`
+                : copy.noEnd,
+
+              duration
+                ? `${duration} ${copy.days}`
+                : "",
+
+              cycle.cycle_length
+                ? `${cycle.cycle_length} ${copy.days}`
+                : ""
+
+            ]
+              .filter(Boolean)
+              .join(" · ");
+
+            details.append(
+              title,
+              description
+            );
+
+            const status =
+              document.createElement("span");
+
+            status.className = "badge";
+
+            status.textContent =
+              cycle.end_date
+                ? copy.saved
+                : copy.inProgress;
+
+            item.append(
+              details,
+              status
+            );
+
+            periodList.append(item);
+
+          });
+        }
       }
 
       const byDate = new Map();
+
       dailyLogs.forEach(log => {
+
         const date = historyDate(log);
-        if (!date || date === todayStr()) return;
+
+        if (!date) return;
+
         byDate.set(date, {
           ...(byDate.get(date) || {}),
           ...log,
           date,
-          symptoms: Array.isArray(log.symptoms) ? [...log.symptoms] : []
+          symptoms:
+            Array.isArray(log.symptoms)
+              ? [...log.symptoms]
+              : []
         });
+
       });
+
       symptomLogs.forEach(log => {
+
         const date = historyDate(log);
-        if (!date || date === todayStr() || !log.symptom) return;
-        const record = byDate.get(date) || { date, symptoms: [] };
+
+        if (!date || !log.symptom) return;
+
+        const record =
+          byDate.get(date) || {
+            date,
+            symptoms: []
+          };
+
         if (!record.symptoms.includes(log.symptom)) {
           record.symptoms.push(log.symptom);
         }
+
         byDate.set(date, record);
+
       });
 
-      const dailyList = $("#daily-history-list");
-      dailyList.replaceChildren();
-      const dailyHistory = [...byDate.values()]
-        .sort((a, b) => b.date.localeCompare(a.date));
-      if (!dailyHistory.length) {
-        const empty = document.createElement("li");
-        empty.className = "tracking-history-empty";
-        empty.textContent = copy.noDaily;
-        dailyList.append(empty);
-      } else {
-        dailyHistory.forEach(log => {
-          const item = document.createElement("li");
-          item.className = "tracking-history-item";
-          const details = document.createElement("div");
-          const title = document.createElement("strong");
-          title.textContent = formatDate(log.date);
-          const summary = [];
-          const symptoms = (log.symptoms || []).map(symptomName);
-          if (symptoms.length) {
-            summary.push(`${copy.symptoms}: ${symptoms.join(", ")}`);
-          }
-          if (log.flow && !["none", "no bleeding", "no_bleeding"].includes(
-            String(log.flow).toLowerCase()
-          )) {
-            summary.push(`${copy.flow}: ${t(String(log.flow).toLowerCase())}`);
-          }
-          if (log.pain !== null && log.pain !== undefined && log.pain !== "" &&
-              Number(log.pain) > 0) {
-            summary.push(`${copy.pain}: ${log.pain}`);
-          }
-          if (log.notes) summary.push(`${copy.note}: ${log.notes}`);
-          if (!summary.length) summary.push(copy.noSymptoms);
+      const dailyList =
+        $("#daily-history-list");
 
-          const description = document.createElement("small");
-          description.textContent = summary.join(" · ");
-          details.append(title, description);
+      if (!dailyList) return;
+
+      dailyList.replaceChildren();
+
+      const dailyHistory =
+        [...byDate.values()]
+          .sort((a, b) =>
+            b.date.localeCompare(a.date)
+          );
+
+      if (!dailyHistory.length) {
+
+        const empty =
+          document.createElement("li");
+
+        empty.className =
+          "tracking-history-empty";
+
+        empty.textContent =
+          copy.noDaily;
+
+        dailyList.append(empty);
+
+      } else {
+
+        dailyHistory.forEach(log => {
+
+          const item =
+            document.createElement("li");
+
+          item.className =
+            "tracking-history-item";
+
+          const details =
+            document.createElement("div");
+
+          const title =
+            document.createElement("strong");
+
+          title.textContent =
+            formatDate(log.date);
+
+          const summary = [];
+
+          const symptoms =
+            (log.symptoms || [])
+              .filter(Boolean)
+              .map(symptomName);
+
+          if (symptoms.length) {
+            summary.push(
+              `${copy.symptoms}: ${symptoms.join(", ")}`
+            );
+          }
+
+          if (
+            log.flow &&
+            ![
+              "none",
+              "no bleeding",
+              "no_bleeding"
+            ].includes(
+              String(log.flow).toLowerCase()
+            )
+          ) {
+
+            summary.push(
+              `${copy.flow}: ${t(
+                String(log.flow).toLowerCase()
+              )}`
+            );
+
+          }
+
+          if (
+            log.pain !== null &&
+            log.pain !== undefined &&
+            log.pain !== "" &&
+            Number(log.pain) > 0
+          ) {
+
+            summary.push(
+              `${copy.pain}: ${log.pain}`
+            );
+
+          }
+
+          if (log.notes) {
+            summary.push(
+              `${copy.note}: ${log.notes}`
+            );
+          }
+
+          if (!summary.length) {
+            summary.push(copy.noSymptoms);
+          }
+
+          const description =
+            document.createElement("small");
+
+          description.textContent =
+            summary.join(" · ");
+
+          details.append(
+            title,
+            description
+          );
+
           item.append(details);
+
           dailyList.append(item);
+
         });
       }
     }
 
     function safeText(value) {
-      const div = document.createElement("div");
-      div.textContent = value ?? "";
+
+      const div =
+        document.createElement("div");
+
+      div.textContent =
+        value ?? "";
+
       return div.innerHTML;
     }
 
     function symptomName(key) {
+
       const translatedKey = {
         mood_changes: "mood",
         back_pain: "backache",
@@ -1368,10 +1591,17 @@
       }[key] || key;
 
       try {
+
         if (typeof t === "function") {
           return t(translatedKey);
         }
-      } catch (e) {}
+
+      } catch (error) {
+        console.warn(
+          "Translation error:",
+          error
+        );
+      }
 
       const fallback = {
         cramps: "Cramps",
@@ -1380,7 +1610,9 @@
         bloating: "Bloating",
         mood: "Mood changes",
         back_pain: "Back pain",
-        cravings: "Cravings"
+        backache: "Back pain",
+        cravings: "Cravings",
+        tender_breasts: "Tender breasts"
       };
 
       return fallback[key] || key;
@@ -1388,25 +1620,38 @@
 
     function renderStats() {
 
-      const cycle = cycleLengths();
-      const period = periodLengths();
+      const cycle =
+        cycleLengths();
 
-      const avgCycle = average(cycle);
-      const avgPeriod = average(period);
+      const period =
+        periodLengths();
+
+      const avgCycle =
+        average(cycle);
+
+      const avgPeriod =
+        average(period);
 
       const variation =
         cycle.length >= 2
-          ? Math.max(...cycle) - Math.min(...cycle)
+          ? Math.max(...cycle) -
+            Math.min(...cycle)
           : null;
 
       $("#avg-cycle").textContent =
-        avgCycle === null ? "—" : avgCycle;
+        avgCycle === null
+          ? "—"
+          : avgCycle;
 
       $("#avg-period").textContent =
-        avgPeriod === null ? "—" : avgPeriod;
+        avgPeriod === null
+          ? "—"
+          : avgPeriod;
 
       $("#variation").textContent =
-        variation === null ? "—" : variation;
+        variation === null
+          ? "—"
+          : variation;
     }
 
     function getMonthData() {
@@ -1416,23 +1661,46 @@
         .reverse()
         .map(cycle => {
 
-          const key = monthKey(
-            cycle.start_date
-          );
+          const key =
+            monthKey(cycle.start_date);
 
-          const symptomSet = new Set();
+          const symptomSet =
+            new Set();
 
           dailyLogs
-            .filter(log => monthKey(log.log_date || log.date) === key)
+            .filter(
+              log =>
+                monthKey(
+                  log.log_date ||
+                  log.date
+                ) === key
+            )
             .forEach(log => {
-            (log.symptoms || []).forEach(
-              symptom => symptomSet.add(symptom)
-            );
-          });
+
+              (log.symptoms || [])
+                .forEach(symptom =>
+                  symptomSet.add(symptom)
+                );
+
+            });
 
           symptomLogs
-            .filter(log => monthKey(log.date || log.log_date) === key)
-            .forEach(log => symptomSet.add(log.symptom));
+            .filter(
+              log =>
+                monthKey(
+                  log.date ||
+                  log.log_date
+                ) === key
+            )
+            .forEach(log => {
+
+              if (log.symptom) {
+                symptomSet.add(
+                  log.symptom
+                );
+              }
+
+            });
 
           let cycleLength =
             cycle.cycle_length
@@ -1441,18 +1709,23 @@
 
           if (!cycleLength) {
 
-            const index = cycles.findIndex(
-              item => item.id === cycle.id
-            );
+            const index =
+              cycles.findIndex(
+                item =>
+                  item.id === cycle.id
+              );
 
             if (
               index >= 0 &&
               index < cycles.length - 1
             ) {
-              cycleLength = diff(
-                cycles[index + 1].start_date,
-                cycle.start_date
-              );
+
+              cycleLength =
+                diff(
+                  cycles[index + 1].start_date,
+                  cycle.start_date
+                );
+
             }
           }
 
@@ -1460,24 +1733,30 @@
             ...cycle,
             month: key,
             cycleLength,
-            symptoms: Array.from(symptomSet)
+            symptoms:
+              Array.from(symptomSet)
           };
+
         });
     }
 
-    function showMonthDetail(item, activeBar) {
+    function showMonthDetail(
+      item,
+      activeBar
+    ) {
 
       document
         .querySelectorAll(".bar-box")
-        .forEach(bar => {
-          bar.classList.remove("selected");
-        });
+        .forEach(bar =>
+          bar.classList.remove("selected")
+        );
 
       activeBar.classList.add("selected");
 
       const lang = getLang();
 
-      const symptoms = item.symptoms || [];
+      const symptoms =
+        item.symptoms || [];
 
       let symptomHTML = "";
 
@@ -1485,11 +1764,15 @@
 
         symptomHTML = `
           <div class="symptom-list">
-            ${symptoms.map(key => `
-              <span class="symptom-pill">
-                ${safeText(symptomName(key))}
-              </span>
-            `).join("")}
+            ${symptoms
+              .map(key => `
+                <span class="symptom-pill">
+                  ${safeText(
+                    symptomName(key)
+                  )}
+                </span>
+              `)
+              .join("")}
           </div>
         `;
 
@@ -1506,11 +1789,16 @@
         `;
       }
 
-      const detail = $("#month-detail");
+      const detail =
+        $("#month-detail");
 
-      detail.style.display = "block";
+      if (!detail) return;
+
+      detail.style.display =
+        "block";
 
       detail.innerHTML = `
+
         <div class="detail-title">
 
           <h3>
@@ -1519,8 +1807,9 @@
                 ? "महीने की जानकारी"
                 : "Month details"
             }
-
-            · ${safeText(monthLabel(item.month))}
+            · ${safeText(
+              monthLabel(item.month)
+            )}
           </h3>
 
           <button
@@ -1547,7 +1836,11 @@
             </span>
 
             <b>
-              ${safeText(formatDate(item.start_date))}
+              ${safeText(
+                formatDate(
+                  item.start_date
+                )
+              )}
             </b>
 
           </div>
@@ -1563,7 +1856,11 @@
             </span>
 
             <b>
-              ${safeText(formatDate(item.end_date))}
+              ${safeText(
+                formatDate(
+                  item.end_date
+                )
+              )}
             </b>
 
           </div>
@@ -1618,28 +1915,32 @@
 
     function closeMonthDetail() {
 
-      const detail = $("#month-detail");
+      const detail =
+        $("#month-detail");
 
       if (detail) {
-        detail.style.display = "none";
+        detail.style.display =
+          "none";
       }
 
       document
         .querySelectorAll(".bar-box")
-        .forEach(bar => {
-          bar.classList.remove("selected");
-        });
+        .forEach(bar =>
+          bar.classList.remove("selected")
+        );
     }
 
     function renderChart() {
 
-      const chart = $("#cycle-chart");
+      const chart =
+        $("#cycle-chart");
 
       if (!chart) return;
 
       chart.innerHTML = "";
 
-      const monthData = getMonthData();
+      const monthData =
+        getMonthData();
 
       if (!monthData.length) {
 
@@ -1656,9 +1957,14 @@
         return;
       }
 
-      const validValues = monthData
-        .map(item => Number(item.cycleLength))
-        .filter(value => value > 0);
+      const validValues =
+        monthData
+          .map(item =>
+            Number(item.cycleLength)
+          )
+          .filter(value =>
+            value > 0
+          );
 
       if (!validValues.length) {
 
@@ -1675,17 +1981,19 @@
         return;
       }
 
-      const max = Math.max(
-        ...validValues,
-        30
-      );
+      const max =
+        Math.max(
+          ...validValues,
+          30
+        );
 
       monthData.forEach(item => {
 
         const box =
           document.createElement("div");
 
-        box.className = "bar-box";
+        box.className =
+          "bar-box";
 
         const value =
           Number(item.cycleLength) || 0;
@@ -1697,6 +2005,7 @@
           );
 
         box.innerHTML = `
+
           <div class="bar-value">
             ${value || "—"}
           </div>
@@ -1707,7 +2016,9 @@
           ></div>
 
           <div class="bar-month">
-            ${safeText(monthLabel(item.month))}
+            ${safeText(
+              monthLabel(item.month)
+            )}
           </div>
 
           <div class="bar-hint">
@@ -1721,21 +2032,27 @@
 
         box.addEventListener(
           "click",
-          function() {
-            showMonthDetail(item, box);
-          }
+          () =>
+            showMonthDetail(
+              item,
+              box
+            )
         );
 
         chart.appendChild(box);
+
       });
     }
 
     function updateLanguage() {
 
-      const lang = getLang();
+      const lang =
+        getLang();
 
       $("#lang-label").textContent =
-        lang === "hi" ? "EN" : "HI";
+        lang === "hi"
+          ? "EN"
+          : "HI";
 
       $("#insight-intro").textContent =
         lang === "hi"
@@ -1772,104 +2089,164 @@
           ? "आपके Insights आपके द्वारा दर्ज किए गए cycle data पर आधारित हैं।"
           : "Your insights are based on the cycle data you have logged.";
 
-      applyTranslations();
+      if (typeof applyTranslations === "function") {
+        applyTranslations();
+      }
 
       renderTrackingHistory();
       renderStats();
       renderChart();
     }
 
-    async function loadInsights() {
+    async function loadInsights(user) {
 
-      const user =
-        await requireAuth();
+      try {
 
-      if (!user) return;
+        const cycleResult =
+          await sb
+            .from("cycle_logs")
+            .select(
+              "id,start_date,end_date,cycle_length,period_length"
+            )
+            .eq("user_id", user.id)
+            .order(
+              "start_date",
+              {
+                ascending: false
+              }
+            )
+            .limit(6);
 
-      const cycleResult = await sb
-        .from("cycle_logs")
-        .select(
-          "id,start_date,end_date,cycle_length,period_length"
-        )
-        .eq("user_id", user.id)
-        .order(
-          "start_date",
-          {
-            ascending: false
-          }
-        )
-        .limit(6);
+        if (cycleResult.error) {
 
-      if (cycleResult.error) {
+          console.error(
+            "Cycle query error:",
+            cycleResult.error
+          );
 
-        toast(
-          getLang() === "hi"
-            ? "Insights load नहीं हो सके।"
-            : "Could not load insights."
-        );
+          toast(
+            getLang() === "hi"
+              ? "Insights load नहीं हो सके।"
+              : "Could not load insights."
+          );
 
-        return;
-      }
+          return;
+        }
 
-      cycles =
-        cycleResult.data || [];
+        cycles =
+          cycleResult.data || [];
 
-      const [logResult, symptomResult, periodHistoryResult] = await Promise.all([
-        sb
-          .from("daily_logs")
-          .select("*")
-          .eq("user_id", user.id),
-        sb
-          .from("symptom_logs")
-          .select("*")
-          .eq("user_id", user.id),
-        sb
-          .from("cycle_logs")
-          .select("id,start_date,end_date,cycle_length,period_length")
-          .eq("user_id", user.id)
-          .order("start_date", { ascending: false })
-      ]);
+        const [
+          logResult,
+          symptomResult,
+          periodHistoryResult
+        ] = await Promise.all([
 
-      if (logResult.error || symptomResult.error || periodHistoryResult.error) {
+          sb
+            .from("daily_logs")
+            .select("*")
+            .eq("user_id", user.id),
+
+          sb
+            .from("symptom_logs")
+            .select("*")
+            .eq("user_id", user.id),
+
+          sb
+            .from("cycle_logs")
+            .select(
+              "id,start_date,end_date,cycle_length,period_length"
+            )
+            .eq("user_id", user.id)
+            .order(
+              "start_date",
+              {
+                ascending: false
+              }
+            )
+
+        ]);
+
+        if (
+          logResult.error ||
+          symptomResult.error ||
+          periodHistoryResult.error
+        ) {
+
+          console.error(
+            "Could not load tracking history:",
+            logResult.error ||
+            symptomResult.error ||
+            periodHistoryResult.error
+          );
+
+          toast(
+            getLang() === "hi"
+              ? "ट्रैकिंग हिस्ट्री लोड नहीं हो सकी।"
+              : "Could not load tracking history."
+          );
+
+          return;
+        }
+
+        dailyLogs =
+          logResult.data || [];
+
+        symptomLogs =
+          symptomResult.data || [];
+
+        periodHistory =
+          periodHistoryResult.data || [];
+
+        renderTrackingHistory();
+        renderStats();
+        renderChart();
+
+      } catch (error) {
+
         console.error(
-          "Could not load tracking history:",
-          logResult.error || symptomResult.error || periodHistoryResult.error
+          "Insights error:",
+          error
         );
+
         toast(
           getLang() === "hi"
-            ? "ट्रैकिंग हिस्ट्री लोड नहीं हो सकी।"
-            : "Could not load tracking history."
+            ? "कुछ गलत हो गया।"
+            : "Something went wrong."
         );
-        return;
       }
-
-      dailyLogs = logResult.data || [];
-      symptomLogs = symptomResult.data || [];
-      periodHistory = periodHistoryResult.data || [];
-
-      renderTrackingHistory();
-      renderStats();
-      renderChart();
     }
 
     async function initInsights() {
 
-      const user =
-        await requireAuth();
+      try {
 
-      if (!user) return;
+        const user =
+          await requireAuth();
 
-      await loadInsights();
+        if (!user) return;
 
-      updateLanguage();
+        await loadInsights(user);
 
-      document.addEventListener(
-        "carexLanguageChanged",
-        updateLanguage
-      );
+        updateLanguage();
+
+        document.addEventListener(
+          "carexLanguageChanged",
+          updateLanguage
+        );
+
+      } catch (error) {
+
+        console.error(
+          "Initialization error:",
+          error
+        );
+
+      }
     }
 
     initInsights();
+
   </script>
 
 </body>
